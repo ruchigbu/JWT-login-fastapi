@@ -28,10 +28,12 @@ Server: 127.0.0.1
 DATABASE_URL = "postgresql://postgres:strongdbpass@127.0.0.1/loginsystem"
 ```
 
-### Activate the virtual environment
+### Activate the virtual environment and install requirements
 
 ```bash
 Scripts\activate.bat
+cd app
+pip install -r requirements.txt
 ```
 
 ### To run
