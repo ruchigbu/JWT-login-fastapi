@@ -1,0 +1,174 @@
+{
+  "info": {
+    "_postman_id": "27f97101-fded-4bd9-a7da-3d51ca02f9eb",
+    "name": "UserJWTLogin",
+    "description": "Working on JWT login with FastAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "login",
+          "id": "09ed0729-6cc0-4180-b2f6-2b723ed92fab",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/user/login/",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "user",
+                "login",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "id": "3089cdf0-81fd-49ca-85b5-ae4fa9252f44",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"admin@mail.com\",\r\n    \"password\":\"password\",\r\n    \"is_sup\":true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/user/register/",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "user",
+                "register",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "id": "52d1423b-b2b6-45c6-a9d3-44dc610e39a7",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzY4MjA3ODQ3fQ.cqtSGw59sDH6TdhJOUdmUT1z9PvgSvhgTnTgwHNmHOA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzY4MjA3ODQ3fQ.cqtSGw59sDH6TdhJOUdmUT1z9PvgSvhgTnTgwHNmHOA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"user_id\": 1,\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzY4MjA3ODQ3fQ.cqtSGw59sDH6TdhJOUdmUT1z9PvgSvhgTnTgwHNmHOA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/user/logout/",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "user",
+                "logout",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "920aeb8c-d40f-4101-8404-ec68deb10ece"
+    },
+    {
+      "name": "reports",
+      "item": [
+        {
+          "name": "login-reports",
+          "id": "bd04ad12-2509-4161-b151-7fe89029e475",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzY4MjA4NTAxfQ.BoiUIePoWQDgp-KQdf8TU9lSI9eKRwzhtLyekT8fGOk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzY4MjA4NTAxfQ.BoiUIePoWQDgp-KQdf8TU9lSI9eKRwzhtLyekT8fGOk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"user_id\": 1,\r\n    \"fromdate\": \"2026-01-01\",\r\n    \"todate\": \"2026-01-12\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzY4MjA4NTAxfQ.BoiUIePoWQDgp-KQdf8TU9lSI9eKRwzhtLyekT8fGOk\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/reports/login-reports/",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "reports",
+                "login-reports",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "714192dd-5346-44fb-8509-2756d0d46669"
+    }
+  ]
+}
