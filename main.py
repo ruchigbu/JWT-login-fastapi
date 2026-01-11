@@ -175,7 +175,6 @@ def login(user: UserLogin, request: Request, db: Session = Depends(get_db)):
 
 # API route to logout
 @app.post("/user/logout/")
-# def logout(data: LogoutRequest, request: Request, db: Session = Depends(get_db)):
 def logout(request: Request, 
     db: Session = Depends(get_db), 
     current_user: User = Security(get_current_active_user)):
@@ -207,7 +206,7 @@ def fetch_login_reports(user_id: Optional[int] = None, fromdate: Optional[dateti
                         todate: Optional[datetime] = None, db: Session = Depends(get_db), current_user: User = Security(get_current_active_user)):
     # Validate the JWT token
     if current_user.token is None:
-        raise HTTPException(status_code=401, detail="Unauthorized " + str(user_id) + "")
+        raise HTTPException(status_code=401, detail="Unauthorized ..." + str(user_id) + "")
 
     query = db.query(User.email, LoginLog.login_time, LoginLog.login_ip, LoginLog.event_type).join(LoginLog)
 
