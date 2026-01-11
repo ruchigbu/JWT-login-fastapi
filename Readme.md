@@ -6,9 +6,9 @@ Postman is used to test the APIs.
 
 ## System Requirements
 
-- [FastAPI]
-- [PostgreSQL]
-- [Postman]
+- FastAPI
+- PostgreSQL
+- Postman
 
 ## How to run and test?
 
